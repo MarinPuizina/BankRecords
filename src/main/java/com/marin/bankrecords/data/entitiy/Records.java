@@ -2,10 +2,9 @@ package com.marin.bankrecords.data.entitiy;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Data
 
@@ -17,5 +16,8 @@ public class Records {
     private int id;
 
     private String type;
+
+    @ManyToMany(mappedBy = "records")
+    private Set<Clients> clients = new HashSet<>();
 
 }
