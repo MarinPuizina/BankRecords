@@ -2,10 +2,8 @@ package com.marin.bankrecords.data.entitiy;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.Set;
 
 @Data
 
@@ -18,5 +16,13 @@ public class Clients {
 
     private String name;
     private String group;
+
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(
+            name = "clients_records",
+            joinColumns = @JoinColumn(name = "clients_id", referencedColumnName = "id"),
+            inverseJoinColumns = @JoinColumn(name = "records_id", referencedColumnName = "id")
+    )
+    private Set<Records> records;
 
 }
