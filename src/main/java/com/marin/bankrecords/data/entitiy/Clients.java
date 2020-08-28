@@ -1,4 +1,4 @@
-package com.marin.bankrecords.data;
+package com.marin.bankrecords.data.entitiy;
 
 import lombok.Data;
 
