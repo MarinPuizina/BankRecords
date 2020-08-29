@@ -26,4 +26,10 @@ public class Clients {
     )
     private Set<Records> records;
 
+
+    public Clients(String name, String group) {
+        this.name = name;
+        this.group = group;
+    }
+
 }
