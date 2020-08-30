@@ -14,7 +14,7 @@ class ClientsRepositoryTest {
     ClientsRepository clientsRepository;
 
     @Test
-    public void testCreateClient() {
+    void clientsRepositoryShouldSaveClient() {
 
         Clients client = clientsRepository.save(new Clients("Test Name", "Rich"));
 
