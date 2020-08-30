@@ -32,4 +32,8 @@ public class Clients {
         this.group = group;
     }
 
+    public void addRecord(Records record) {
+        records.add(record);
+    }
+
 }
