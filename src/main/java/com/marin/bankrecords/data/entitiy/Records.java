@@ -20,4 +20,9 @@ public class Records {
     @ManyToMany(mappedBy = "records")
     private Set<Clients> clients = new HashSet<>();
 
+    
+    public Records(String type) {
+        this.type = type;
+    }
+
 }
