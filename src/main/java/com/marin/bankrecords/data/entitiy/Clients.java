@@ -19,7 +19,7 @@ public class Clients {
     private String name;
     private String group;
 
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany
     @JoinTable(
             name = "clients_records",
             joinColumns = @JoinColumn(name = "clients_id", referencedColumnName = "id"),
