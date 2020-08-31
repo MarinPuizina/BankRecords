@@ -3,6 +3,7 @@ package com.marin.bankrecords.data.entitiy;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Set;
 
 @Data
@@ -24,7 +25,7 @@ public class Clients {
             joinColumns = @JoinColumn(name = "clients_id", referencedColumnName = "id"),
             inverseJoinColumns = @JoinColumn(name = "records_id", referencedColumnName = "id")
     )
-    private Set<Records> records;
+    private Set<Records> records = new HashSet<>();
 
 
     public Clients(String name, String group) {
