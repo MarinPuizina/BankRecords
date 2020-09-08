@@ -14,6 +14,8 @@ public class BankRecordsApplication {
 	public static void main(String[] args) {
 		ConfigurableApplicationContext context = SpringApplication.run(BankRecordsApplication.class, args);
 
+
+		// ADDED TO BE ABLE TO ADD TEST DATA IN DATABASE
 		RecordsRepository recordsRepository = context.getBean(RecordsRepository.class);
 		ClientsRepository clientsRepository = context.getBean(ClientsRepository.class);
 
